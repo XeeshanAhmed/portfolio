@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Button from '@/components/button/Button';
 import Image from 'next/image'
 import React from 'react'
@@ -6,8 +6,10 @@ import { GoDash } from "react-icons/go";
 import Typewriter from 'typewriter-effect';
 import { FaArrowRight } from "react-icons/fa6";
 import styles from'./style.module.css'
+import { useRouter } from 'next/navigation';
 
 const page = () => {
+  const router=useRouter();
   return (
     <div className='flex justify-evenly items-center md:flex-row flex-col-reverse mt-36'>
       <div className='m-6'>
@@ -28,7 +30,7 @@ const page = () => {
         /></div>
         <p className='text-white my-6 leading-8 tracking-wider md:text-left text-center'>I'm a Punjab-based web designer & front-end developer focused on crafting clean & user-friendly experiences. I am passionate about building excellent software that improves the lives of those around me.
         </p>
-        <div className='mx-auto md:mx-0 my-3 md:my-0'><Button icon={<FaArrowRight />}>MORE ABOUT ME</Button></div>
+        <div className='mx-auto md:mx-0 my-3 md:my-0'><Button icon={<FaArrowRight />} onClick={()=>router.push('/about')}>MORE ABOUT ME</Button></div>
       </div>
     </div>
   )
