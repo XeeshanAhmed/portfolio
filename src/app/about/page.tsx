@@ -6,7 +6,7 @@ import React from 'react'
 
 const aboutPage = () => {
   return (
-    <div className='md:mx-28 mx-4 my-10'>
+    <div className='md:mx-28 mx-4 my-16'>
         <h1 className='md:text-6xl text-4xl text-center font-extrabold p-5 m-10'><span className='text-primary'>ABOUT</span> ME</h1>
         <div>
             <div className='text-primary  tracking-wider'>

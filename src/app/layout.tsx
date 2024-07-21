@@ -4,7 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import ThemeController from "@/components/themeController/ThemeController";
-import Drawer from "@/components/drawer/Drawer";
+import Drawer from "@/components/navbar/components/Drawer";
+import TopBar from "@/components/navbar/components/TopBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Drawer/>
         <Navbar/>
-        <ThemeController/>
         {children}
         <Footer/>
         </body>

@@ -20,7 +20,7 @@ const MobileDrawer = () => {
 
   return (
     <>
-      <div className="absolute w-max right-4 top-[10px]  md:hidden">
+      <div className="relative w-max  md:hidden">
         <button onClick={toggleDrawer} className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
           <svg className="h-8 w-8 text-base-content" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="3" y1="12" x2="21" y2="12" />
@@ -29,7 +29,7 @@ const MobileDrawer = () => {
           </svg>
         </button>
       </div>
-      <div className={`fixed top-0 right-0 z-10 h-3/4 rounded-s-2xl  w-64 bg-base-300 transform transition-all duration-1000 delay-75 ${isDrawerOpen ? 'translate-x-0 shadow-md shadow-base-content' : 'translate-x-full'} md:hidden`}>
+      <div className={`fixed top-0 right-0 z-10 h-3/4 rounded-s-2xl  w-64 bg-base-300 transform transition-all duration-500  ${isDrawerOpen ? 'translate-x-0 shadow-md shadow-base-content' : 'translate-x-full'} md:hidden`}>
         <button onClick={toggleDrawer} className="absolute top-4 right-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
           <svg className="h-8 w-8 text-base-content" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="18" y1="6" x2="6" y2="18" />

@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 const contactPage = () => {
   return (
-    <div  className='mx-4 md:mx-28 my-10'>
+    <div  className='mx-4 md:mx-28 my-16'>
         <h1 className='text-4xl md:text-6xl text-center font-extrabold p-5 m-10'><span className='text-primary'>GET IN</span> TOUCH</h1>
         <div className='flex justify-between flex-col md:flex-row'>
           <div className='w-full md:w-4/12'>

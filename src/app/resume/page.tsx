@@ -7,7 +7,7 @@ import InfoCard from '@/components/infoCard/InfoCard';
 
 const resumePage = () => {
   return (
-    <div className='md:mx-28 mx-4 my-10'>
+    <div className='md:mx-28 mx-4 my-16'>
         <h1 className='text-4xl md:text-6xl text-center font-extrabold p-5 m-10'><span className='text-primary'>RE</span>SUME</h1>
         <h1 className='text-2xl md:text-3xl font-medium text-center mb-8'>Personal <span className='text-primary'>Information</span></h1>
         <div className='flex justify-between flex-col md:flex-row'>

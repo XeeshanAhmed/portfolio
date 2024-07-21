@@ -3,7 +3,7 @@ import React from 'react'
 
 const projectPage = () => {
   return (
-    <div  className='mx-4 md:mx-28 my-10'>
+    <div  className='mx-4 md:mx-28 my-16'>
         <h1 className='text-4xl md:text-6xl text-center font-extrabold p-5 m-5'><span className='text-primary'>PR0</span>JECTS</h1>
         <h1 className='text-2xl md:text-3xl font-medium text-center mb-5'>Semester <span className='text-primary'>Projects</span></h1>
         <div className='flex justify-around flex-wrap gap-5'>

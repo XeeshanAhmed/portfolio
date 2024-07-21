@@ -11,16 +11,16 @@ import { useRouter } from 'next/navigation';
 const page = () => {
   const router=useRouter();
   return (
-    <div className='flex justify-evenly items-center md:flex-row flex-col md:mt-36 '>
+    <div className='flex justify-evenly items-center md:flex-row flex-col md:mt-36 mt-14 '>
       <div className='m-6'>
-        <Image src={'/profile_img/zeeshan.png'} alt='profile image'  width={350}  height={350} className={`md:border-s-[20px] md:border-b-[20px] border-base-300 md:rounded-t-box md:rounded-e-box md:rounded-none rounded-full border-4  md:border-0 `}/>
+        <Image src={'/profile_img/zeeshan.png'} alt='profile image'  width={350}  height={350} className={`md:border-s-[20px] md:border-b-[20px] border-base-300 md:border-base-content  md:rounded-t-xl md:rounded-b-lg md:rounded-e-xl md:rounded-none rounded-full border-4  md:border-0 `}/>
       </div>
       <div className='flex flex-col justify-center items-start md:w-1/2 w-11/12'>
         <h1 className='md:text-5xl text-2xl flex justify-center md:justify-start items-center font-extrabold w-full'><span><GoDash className='text-7xl hidden md:block '/></span><span>I'm Zeeshan Ahmad.</span></h1>
         <div className='md:text-5xl text-2xl text-primary mt-4 font-extrabold text-center'>
           <Typewriter
             options={{
-            strings: ['Web Developer.', 'UI/UX Designer.'],
+            strings: ['Software Developer.', 'UI/UX Designer.'],
             autoStart: true,
             loop: true,
             cursor:'●',
