@@ -19,7 +19,7 @@ const page = () => {
         <h1 className='md:text-5xl text-2xl text-primary mt-4 font-extrabold text-center w-full'>
           <Typewriter
             options={{
-            strings: ['Software Developer.','Tech Enthusiast.','Logic Builder', 'UI/UX Designer.'],
+            strings: ['Software Developer.','Tech Enthusiast.','Logic Builder'],
             autoStart: true,
             loop: true,
             cursor:'●',
