@@ -7,12 +7,12 @@ const projectPage = () => {
         <h1 className='text-4xl md:text-6xl text-center font-extrabold p-5 m-5'><span className='text-primary'>PR0</span>JECTS</h1>
         <h1 className='text-2xl md:text-3xl font-medium text-center mb-5'>Semester <span className='text-primary'>Projects</span></h1>
         <div className='flex justify-around flex-wrap gap-5'>
-            <Card image='/screenshots/1.png' title='Weather App' desc='Desktop application created in JAVA with GUI using JAVA FX.' link='/'/>
-            <Card image='/screenshots/2.png' title='Bank App' desc='Desktop application created in C++ with CLI.' link='/'/>
+            <Card image='/screenshots/1.png' title='Weather App' desc='Desktop application created in JAVA with GUI using JAVA FX.' link='https://github.com/XeeshanAhmed/Weather-App'/>
+            <Card image='/screenshots/2.png' title='Bank App' desc='Desktop application created in C++ with CLI.' link='https://github.com/XeeshanAhmed/Online-Banking-Application'/>
         </div>
         <h1 className='text-3xl font-medium text-center mb-5 mt-10'><span className='text-primary'>Personal</span> Projects</h1>
         <div className='flex justify-around'>
-            <Card image='/screenshots/3.png' title='World Tour Website' desc='A fully responsive frontend website created using HTML and CSS.' link='/'/>
+            <Card image='/screenshots/3.png' title='World Tour Website' desc='A fully responsive frontend website created using HTML and CSS.' link='https://github.com/XeeshanAhmed/World-Tour-Website'/>
         </div>
     </div>
   )

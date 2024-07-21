@@ -23,10 +23,10 @@ const contactPage = () => {
             <About heading='Mail Me' description='xeeshanahmad348@gmail.com' icon={<IoMdMailOpen/>}/>
             <About heading='Call Me' description='+923011683998' icon={<FaSquarePhone/>}/>
             <div className='flex  space-x-5 mt-5 ml-2 text-primary items-center'>
-             <Link href={'/'} target='_blank' rel='noopener noreferrer'><MdAlternateEmail className='bg-base-300 w-12 h-12 rounded-full p-3'/></Link>
+             <Link href={'mailto:xeeshanahmad348@gmail.com'} target='_blank' rel='noopener noreferrer'><MdAlternateEmail className='bg-base-300 w-12 h-12 rounded-full p-3'/></Link>
              <Link href={'/'} target='_blank' rel='noopener noreferrer'><TiSocialTwitter className='bg-base-300 w-12 h-12 rounded-full p-3 '/></Link>
-             <Link href={'/'} target='_blank' rel='noopener noreferrer'><LiaLinkedinIn className='bg-base-300 w-12 h-12 rounded-full p-3'/></Link>
-             <Link href={'/'} target='_blank' rel='noopener noreferrer'><IoLogoGithub className='bg-base-300 w-12 h-12 rounded-full p-3'/></Link>
+             <Link href={'https://www.linkedin.com/in/zeeshan-ahmad-azeem/'} target='_blank' rel='noopener noreferrer'><LiaLinkedinIn className='bg-base-300 w-12 h-12 rounded-full p-3'/></Link>
+             <Link href={'https://github.com/XeeshanAhmed'} target='_blank' rel='noopener noreferrer'><IoLogoGithub className='bg-base-300 w-12 h-12 rounded-full p-3'/></Link>
             </div>
           </div>
           <div className='w-full md:w-3/5'>
