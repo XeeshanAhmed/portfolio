@@ -3,16 +3,42 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import ThemeController from "@/components/themeController/ThemeController";
-import Drawer from "@/components/navbar/components/Drawer";
-import TopBar from "@/components/navbar/components/TopBar";
+import StructuredData from "@/components/structuredData/structuredData";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Zeeshan Ahmad",
-  description: "Zeeshan Ahmad Personal Portfolio. The best portfolio design. Unique Portfolio design. Best portfolio design for web developers. Next.js Portfolio. Next js",
-};
+  export const metadata: Metadata = {
+    metadataBase: new URL("https://zeeshanahmad.vercel.app"),
+    keywords: [
+      "Zeeshan Ahmad",
+      "Portfolio",
+      "Next.js portfolio",
+      "Web Developer",
+      "JavaScript",
+      "Frontend Developer",
+      "React portfolio",
+      "Developer Portfolio",
+    ],
+    title: {
+      default: "Zeeshan Ahmad",
+      template: "%s | Zeeshan Ahmad",
+    },
+    description: "Explore the professional portfolio of Zeeshan Ahmad, a skilled web developer specializing in Next.js.",
+    openGraph: {
+      title: "Zeeshan Ahmad - Portfolio",
+      description: "Welcome to the portfolio of Zeeshan Ahmad, showcasing expertise in Next.js development and modern web solutions.",
+      url: "https://zeeshanahmad.vercel.app",
+      type: "website",
+      images: [
+        {
+          url: "https://zeeshanahmad.vercel.app/profile_img/xeeshan.png",
+          width: 800,
+          height: 600,
+          alt: "Zeeshan Ahmad Profile Picture",
+        },
+      ],
+    },
+  };
 
 export default function RootLayout({
   children,
@@ -23,6 +49,7 @@ export default function RootLayout({
     <html lang="en">
        <head>
         <link rel="icon" href="/profile_img/xeeshan.png" />
+        <StructuredData/>
       </head>
       <body className={inter.className}>
         <Navbar/>

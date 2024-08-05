@@ -16,7 +16,7 @@ const Page = () => {
       </div>
       <div className='flex flex-col justify-center items-start md:w-1/2 w-11/12'>
         <h1 className='md:text-5xl text-2xl flex justify-center md:justify-start items-center font-extrabold w-full'><span><GoDash className='text-7xl hidden md:block '/></span><span>I&apos;m Zeeshan Ahmad.</span></h1>
-        <h1 className='md:text-5xl text-2xl text-primary mt-4 font-extrabold text-center w-full'>
+        <h1 className='md:text-5xl text-2xl text-primary mt-4 font-extrabold text-center sm:text-left ml-0 sm:ml-[68px]  w-full'>
           <Typewriter
             options={{
             strings: ['Software Developer.','Tech Enthusiast.','Logic Builder.'],
