@@ -9,7 +9,7 @@ const InfoCard:React.FC<experienceInterface> = ({tenure,company,role,desc}) => {
             <span className='badge badge-outline'>{tenure}</span>
        </div>
        <div className='md:px-12 px-2 border-l-2 ml-[24px] w-max border-base-300 text-primary'>
-            <h1><strong>{role}</strong> <span className='text-zinc-500'>- {company}</span></h1>
+            <h1 className='font-semibold'><strong>{role}</strong> <span className='text-zinc-500'>- {company}</span></h1>
             <p className='py-2 text-wrap'>{desc}</p>
        </div>
     </div>

@@ -1,17 +1,21 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import GitHubCalendar from "react-github-calendar";
-import styles from './style.module.css'
+import { useAppSelector } from '@/redux/hooks/hooks';
+import { RootState } from '@/redux/store/store';
 
 const GithubCalender = () => {
+  const mode=useAppSelector((state:RootState)=>state);
+  const [colorScheme, setcolorScheme] = useState<'light'|'dark'>("dark")
+  useEffect(() => {
+    setcolorScheme(prevScheme => (prevScheme === 'light' ? 'dark' : 'light'));
+  }, [mode])
+  
   return (
-    <div className='my-14 shadow-green-500 shadow-sm flex items-center justify-center text-primary'>
-        <GitHubCalendar username='XeeshanAhmed' blockSize={15} fontSize={16} blockMargin={4} colorScheme='dark' style={colorScheme} />
+    <div className='my-14 shadow-green-400 shadow-sm flex items-center justify-around text-primary'>
+        <GitHubCalendar username='XeeshanAhmed' blockSize={14} fontSize={16} blockMargin={5} colorScheme={colorScheme}/>
     </div>
   )
-}
-const colorScheme:React.CSSProperties={
-    color:"primary",
-    
 }
 
 export default GithubCalender

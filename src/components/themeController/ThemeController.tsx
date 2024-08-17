@@ -1,10 +1,14 @@
+"use client"
 import React from 'react'
+import { useAppDispatch } from '@/redux/hooks/hooks'
+import { toogleTheme } from '@/redux/slice/themeSlice';
 
 const ThemeController = () => {
+  const dispatch=useAppDispatch();
   return (
-    <label className="swap swap-rotate relative  "> {/*!hidden top-4 left-4*/}
+    <label className="swap swap-rotate relative  " > {/*!hidden top-4 left-4*/}
   {/* this hidden checkbox controls the state */}
-  <input type="checkbox" className="theme-controller" value="emerald" />
+  <input type="checkbox" className="theme-controller" value="emerald" onClick={()=>dispatch(toogleTheme())}/>
 
   {/* sun icon */}
   <svg

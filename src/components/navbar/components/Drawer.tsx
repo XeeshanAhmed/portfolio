@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState, MutableRefObject } from 'react';
 import Link from 'next/link';
 import { FaHome, FaUser, FaBriefcase, FaEnvelope, FaComments } from 'react-icons/fa';
 import { PiReadCvLogoFill } from "react-icons/pi";
@@ -7,8 +7,11 @@ import { HiMiniPresentationChartLine } from "react-icons/hi2";
 import { CgGitFork } from "react-icons/cg";
 import { IoMdStar } from "react-icons/io";
 
+
 const MobileDrawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const drawerRef = useRef<HTMLDivElement | null>(null);
+
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -17,6 +20,27 @@ const MobileDrawer = () => {
   const handleLinkClick = () => {
     setIsDrawerOpen(false);
   };
+
+
+
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
+      setIsDrawerOpen(false);
+    }
+  };
+
+  if (isDrawerOpen) {
+    document.addEventListener('mousedown', handleClickOutside);
+  } else {
+    document.removeEventListener('mousedown', handleClickOutside);
+  }
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, [isDrawerOpen]);
+
 
   return (
     <>
@@ -29,7 +53,7 @@ const MobileDrawer = () => {
           </svg>
         </button>
       </div>
-      <div className={`fixed top-0 right-0 z-10 h-3/4 rounded-s-2xl  w-64 bg-base-300 transform transition-all duration-500  ${isDrawerOpen ? 'translate-x-0 shadow-md shadow-base-content' : 'translate-x-full'} md:hidden`}>
+      <div ref={drawerRef} className={`fixed top-0 right-0 z-10 h-3/4 rounded-s-2xl  w-64 bg-base-300 transform transition-all duration-500  ${isDrawerOpen ? 'translate-x-0 shadow-md shadow-base-content' : 'translate-x-full'} md:hidden`}>
         <button onClick={toggleDrawer} className="absolute top-4 right-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
           <svg className="h-8 w-8 text-base-content" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <line x1="18" y1="6" x2="6" y2="18" />
