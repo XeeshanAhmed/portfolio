@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import StructuredData from "@/components/structuredData/structuredData";
-import Copilotskit from "@/components/copilotkit/Copilotskit";
 import Providers from "@/redux/provider/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -54,13 +53,11 @@ export default function RootLayout({
         <StructuredData/>
       </head>
       <body className={inter.className}>
-        <Copilotskit>
         <Providers>
         <Navbar/>
         {children}
         <Footer/>
         </Providers>
-        </Copilotskit>
         </body>
     </html>
   );
