@@ -6,7 +6,7 @@ import { RootState } from '@/redux/store/store';
 
 const GithubCalender = () => {
   const mode=useAppSelector((state:RootState)=>state);
-  const [colorScheme, setcolorScheme] = useState<'light'|'dark'>("dark")
+  const [colorScheme, setcolorScheme] = useState<'light'|'dark'>("light")
   useEffect(() => {
     setcolorScheme(prevScheme => (prevScheme === 'light' ? 'dark' : 'light'));
   }, [mode])
